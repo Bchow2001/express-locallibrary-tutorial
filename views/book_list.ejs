@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><%=title%></title>
+	</head>
+	<body>
+		<% extend('layout') %>
+		<h1><%=title%></h1>
+		<%if(book_list.length){%>
+		<ul>
+			<%book_list.forEach(function(book){ %>
+			<li>
+				<a href="<%=book.url%>"><%=book.title%></a>
+				(<%=(book.author.name)%>)
+			</li>
+			<%})%>
+		</ul>
+		<%} else {%>
+		<p>There are no books.</p>
+		<%}%>
+	</body>
+</html>

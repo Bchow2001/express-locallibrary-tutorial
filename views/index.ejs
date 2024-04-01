@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title><%=title%></title>
+	</head>
+	<body>
+		<% extend('layout') %>
+		<h1><%= title%></h1>
+		<p>
+			Welcome to <em>LocalLibrary</em>, a very basic Express website
+			developed as a tutorial example on the Mozilla Developer Network.
+		</p>
+		<h1>Dynamic Content</h1>
+		<p>The library has the following record counts:</p>
+		<ul>
+			<li><strong>Books: <%= book_count%></strong></li>
+			<li><strong>Copies: <%= book_instance_count%></strong></li>
+			<li>
+				<strong>Available: <%= book_instance_available_count%></strong>
+			</li>
+			<li><strong>Authors: <%= author_count%></strong></li>
+			<li><strong>Genres: <%= genre_count%></strong></li>
+		</ul>
+	</body>
+</html>
